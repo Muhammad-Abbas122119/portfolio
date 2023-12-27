@@ -1,0 +1,367 @@
+* {
+   padding: 0;
+   margin: 0;
+   font-family: sans-serif;
+   box-sizing: border-box;
+}
+
+:root {
+   --text-color: #540670;
+}
+
+/* -------------------------------NAVBAR-----------------------------------*/
+#navbar {
+
+   background: radial-gradient(black,
+         var(--text-color),
+         black,
+         var(--text-color),
+         black);
+
+   color: white;
+   border-bottom: 2px solid black;
+   position: relative;
+}
+
+#navbar .container:after {
+   width: 100%;
+   /* height:100px; */
+   background: rgba(11, 7, 7, 0.212);
+   position: absolute;
+   content: '';
+   bottom: 0;
+   display: block;
+   left: 0;
+   top: 0;
+}
+
+.logo {
+   z-index: 1000;
+   font-weight: 700;
+}
+.logo span{
+   color: blueviolet;
+   font-weight: 800;
+}
+.navbar-nav a {
+   color: white;
+   z-index: 1000;
+   position: relative;
+   transition: all 0.2s;
+}
+
+.navbar-nav a:hover {
+   color: blueviolet;
+   transform: scale(1.1);
+
+}
+
+.navbar-nav a:focus{
+   color: blueviolet;
+}
+.navbar-toggler {
+   background: white;
+}
+
+.navbar-toggler:focus {
+   outline: none;
+}
+
+/* -----------------------------------HOME---------------------------------- */
+
+#home {
+   background-color: var(--text-color);
+   display: flex;
+   width: 100%;
+   justify-content: space-evenly;
+   height: calc(100vh - 60px);
+   padding-top: 50px;
+   position: sticky;
+   top: 0;
+}
+
+#home div {
+   width: 50%;
+   height: -webkit-fill-available;
+}
+.info h2,
+.info h5,
+.info h3{
+   transform: scaleY(1.3);
+   font-size: 25px;
+}
+.info span {
+   color:rgb(200, 51, 116); ;
+   font-weight: 700;
+}
+.cover-img img {
+   width: 90%;
+   height: 100%;
+}
+
+
+/* -----------------------------ABOUT------------------------------- */
+
+#about{
+   background: #1c1b1b !important;
+   position: sticky;
+   top: 0px;
+   z-index: 1000;
+   color:white;
+}
+
+.about-img{
+   width: -webkit-fill-available;
+   border-top-right-radius: 18px;
+   border-bottom-right-radius: 13px;
+   height: -webkit-fill-available;
+}
+
+#about .h2{
+   color:white;
+    font-weight: 700;
+    font-family: system-ui;
+}
+#about .h2 span{
+   color: blueviolet;
+}
+
+#about .lead{
+   font-size: 1.1rem !important;
+}
+
+.tabs{
+   color: blueviolet;
+   font-weight: 800;
+   transition: all 1s;
+}
+
+.tabs div{
+
+   cursor: pointer;
+}
+.base-line{
+   position: relative;
+}
+.base-line:after{
+   content: "";
+   position: absolute;
+   background:white;
+   bottom: -10px;
+   left: 13px;
+   height: 2px;
+   width: 50%;
+   transition: 0.5s;
+}
+.skills ul li{
+   letter-spacing: 1px;
+    font-size: large;
+    font-weight: bold;
+}
+
+/* -----------------------------TEMPLATES--------------------------- */
+
+#template{
+background:#1c1b1b;
+position: relative;
+z-index: 1001;
+color: white;
+padding-bottom: 30px;
+}
+
+#template h2,
+#contact .h2{
+   font-weight: 700;
+   transform: scaleY(1.2);
+   padding-bottom: 15px;
+   position: relative;
+   margin-bottom: 25px;
+}
+
+#template h2::after,
+#contact .h2:after{
+   content: "";
+   position: absolute;
+   display: block;
+   background: white;
+   width: 13%;
+   height: 2px;
+   bottom: 8px;
+  }
+
+  .react-horizontal-scrolling-menu--scroll-container{
+   overflow: hidden;
+   white-space: nowrap;
+  }
+  .scroll-right , .scroll-left
+  {
+   height: 30px;
+   background: none;
+   color: white;
+   border: none;
+   position: absolute;
+   top: 50%;
+   z-index: 1;
+   animation: colorChanger 2s infinite;
+   transform: scale(1.2 , 1.3);
+  }
+
+  @keyframes colorChanger {
+   10%{
+      color: white;
+   }
+   60%{
+      color: var(--text-color);
+   }
+   100%{
+      color: rgba(0, 0, 0, 0.478);
+   }
+  }
+.card{
+   position: relative;
+   border-radius: 13px;
+   border: none;
+   overflow: hidden;
+}
+
+.card img{
+   height: 395px;
+   width: 296px;
+   transition: 0.7s;
+}
+.card:hover img{
+transform: scale(1.1);
+}
+
+.card-details {
+   color: white;
+   background: linear-gradient(rgba(255, 255, 255, 0.697),rgb(84 6 112 / 60%) , rgba(0, 0, 0, 0.439));
+   margin-bottom: 20px;
+   padding: 5px 1px;
+   position:absolute;
+   bottom:0;
+   text-align: center;
+   text-wrap: wrap;
+}
+
+.shutter{
+   background: linear-gradient(rgba(0, 0, 0, 0.786) , rgb(84 6 112 / 70%));
+   position: absolute;
+   width: 100%;
+   height: 0;
+   transition: 0.3s;
+   border-radius: 13px;
+   border: none;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-size: 35px;
+}
+.card:hover .shutter{
+   height: 100%;
+}
+
+.shutter a{
+   padding: 6px 12px;
+   background-color: white;
+   color: var(--text-color);
+   border-radius: 50%;
+   display: none;
+}
+.card:hover .shutter a{
+   display: initial;
+}
+
+/* ----------------------------------CONTACT------------------------------- */
+
+#contact{
+   position: relative;
+   z-index: 10000;
+   background:#1c1b1b;
+}
+
+input:focus{
+outline: none;
+border: none;
+}
+
+#contact .btn {
+   color: white !important;
+   background: linear-gradient(125deg , rgba(255, 255, 255, 0.714),rgba(0, 0, 0, 0.498),var(--text-color));
+   font-weight: bold;
+   font-family: math;
+}
+
+.social-links a{
+   color: white;
+}
+.social-links a i:hover{
+color: var(--text-color);
+transition:all 0.5s
+}
+
+/* ---------------------------FOOTER------------------------------ */
+#footer{
+   z-index: 1000;
+   position: relative;
+}
+
+
+
+
+
+/* -------------------------RESPOSIVENESS--------------------- */
+
+@media (max-width:768px){
+#about{
+   position: relative;
+}
+}
+
+
+@media (max-width : 425px)
+{
+
+   /* -------------HOME---------- */
+
+   .info h2,
+   .info h5,
+   .info h3{
+      margin-bottom: 10px;
+      text-wrap: nowrap;
+      width: 100%;
+      font-size: 15px;
+      padding-left: 10px;
+   }
+
+   /* ----------ABOUT----------- */
+
+   #about{
+      position: relative;
+   }
+
+   #about .h2{
+      margin-top: 20px;
+   }
+
+   #about .lead{
+      font-size: 0.8rem !important;
+    font-family: monospace;
+    margin-bottom: 45px;
+   }
+
+   #contact .text-white{
+      padding-top: 30px;
+   }
+
+   .education .pt-2{
+      padding-top: 30px !important;
+   }
+}
+
+@media (max-width:325px){
+   .tabs div{
+      padding-left: 4px;
+   }
+}
